@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+
+        <div class="search">
+        <h1>All products</h1>
+        <input type="text" name="" id="find" 
+        placeholder="search here..."
+         onkeyup="search()">
+        </div>
+
+        <div class="product-list">
+            <div class="product">
+                <img src="photos/car1.jpg">
+                <h3>Maruti</h3>
+                <h4>$1000.00 - <del>$120</del></h4>
+
+            </div>
+
+        
+
+            <div class="product">
+                <img src="photos/car2.jpg">
+                <h3>thar</h3>
+                <h4>$1000.00 - <del>$120</del></h4>
+
+            </div>
+
+            <div class="product">
+                <img src="photos/car3.jpg">
+                <h3>Creta</h3>
+                <h4>$1000.00 - <del>$120</del></h4>
+
+            </div>
+
+            <div class="product">
+                <img src="photos/car4.jpg">
+                <h3>Bolero</h3>
+                <h4>$1000.00 - <del>$120</del></h4>
+
+            </div>
+
+            <div class="product">
+                <img src="photos/car5.jpg">
+                <h3>Swift</h3>
+                <h4>$1000.00 - <del>$120</del></h4>
+
+            </div>
+
+            <div class="product">
+                <img src="photos/car6.jpg">
+                <h3>Tarzen</h3>
+                <h4>$1000.00 - <del>$120</del></h4>
+
+            </div>
+            <div class="product">
+                <img src="photos/car7.jpg">
+                <h3>Tesla</h3>
+                <h4>$1000.00 - <del>$120</del></h4>
+
+            </div>
+
+            <div class="product">
+                <img src="photos/car8.jpg">
+                <h3>Toyota</h3>
+                <h4>$1000.00 - <del>$120</del></h4>
+
+            </div>
+
+            <div class="product">
+                <img src="photos/car9.jpg">
+                <h3>Tata Ev</h3>
+                <h4>$1000.00 - <del>$120</del></h4>
+
+            </div>
+
+            
+            <div class="product">
+                <img src="photos/car10.jpg">
+                <h3>Irtica</h3>
+                <h4>$1000.00 - <del>$120</del></h4>
+
+            </div>
+            
+            <div class="product">
+                <img src="photos/car11.jpg">
+                <h3>Tavera</h3>
+                <h4>$1000.00 - <del>$120</del></h4>
+
+            </div>
+
+            
+            <div class="product">
+                <img src="photos/car12.jpg">
+                <h3>Lamborgini</h3>
+                <h4>$1000.00 - <del>$120</del></h4>
+
+            </div>
+            
+            
+
+
+
+
+
+        </div>
+
+        </div>
+
+    </div>
+
+
+    <style>
+
+        body{
+            background: #ddd;
+        }
+        .main{
+            width: 100%;
+            height: auto;
+            padding: 0px;
+            border: 1px solid black;
+        }
+
+        .container{
+            width: 1200px;
+            height: auto;
+            margin: auto;
+          border: 1px solid black;
+        }
+        .container .search{
+            display: flex;
+            padding:30px  0px;
+            justify-content: space-between;
+        }
+        .container .search h1{
+         
+            letter-spacing: 3px;
+            display: inline-block;
+            border-bottom: 2px solid green;
+            padding-bottom: 5px;
+        }
+        .container .search input{
+
+            width: 60%;
+            padding: 5px 16px;
+            border:  1px solid #000;
+            font-size: 30px
+
+        }
+        .container .product-list{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        img{
+            height: 200px;
+            width: 200px;
+            margin-left: 50px;
+        }
+
+    </style>
+
+    <script>
+
+function search(){
+
+    let filter = document.getElementById('find').value.toUpperCase();
+    console.log(filter);
+
+    let item = document.querySelectorAll('.product');
+    console.log(item)
+
+    let l = document.getElementsByTagName('h3');
+    console.log(l.length);
+
+    for( var i= 0;i<l.length;i++){
+
+        let a = item[i].getElementsByTagName('h3')[0];
+
+
+        let value = a.innerHTML || a.innerText || a.textContent;
+
+        if(value.toUpperCase().indexOf(filter) > -1){
+
+            item[i].style.display="";
+        }
+        else{
+            
+            item[i].style.display="none";
+
+        }
+    }
+}
+
+    </script>
+</body>
+
+</html>

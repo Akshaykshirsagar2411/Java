@@ -1,17 +1,19 @@
-class Test2 {
+ class Test2 {
     
+
     public static void main(String[] args) {
-    int   fact=1;
-    int N=3;
 
-    while(N !=0){
+        int arr[] = new int[]{4,2,5,6,7};
+        int max=arr[0];
 
-        fact= fact*N;
-        N--;
-    }
+        for(int i=0;i<arr.length;i++){
 
-    System.out.println("Factioral is"+"=" +fact);
-    
+                       if(max<arr[i]){
 
+                        max=arr[i];
+                       }
+        }
+
+        System.out.println("max number is "+ max);
     }
 }
